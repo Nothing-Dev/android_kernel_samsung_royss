@@ -8,7 +8,6 @@ ifdef CONFIG_DEBUG_FS
 endif
 
 obj-$(CONFIG_HID)		+= hid.o
-obj-$(CONFIG_UHID)		+= uhid.o
 
 hid-$(CONFIG_HIDRAW)		+= hidraw.o
 
@@ -26,7 +25,6 @@ ifdef CONFIG_LOGIWII_FF
 	hid-logitech-y	+= hid-lg4ff.o
 endif
 
-obj-y				+= hid-generic.o
 obj-$(CONFIG_HID_A4TECH)	+= hid-a4tech.o
 obj-$(CONFIG_HID_ACRUX)		+= hid-axff.o
 obj-$(CONFIG_HID_APPLE)		+= hid-apple.o
