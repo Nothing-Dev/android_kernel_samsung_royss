@@ -620,9 +620,9 @@ static int __init hci_uart_init(void)
 #ifdef CONFIG_BT_HCIUART_H4
 	h4_init();
 #endif
-
+#ifdef CONFIG_BT_HCIUART_BCSP
 	bcsp_init();
-
+#endif
 #ifdef CONFIG_BT_HCIUART_LL
 	ll_init();
 #endif
@@ -631,9 +631,6 @@ static int __init hci_uart_init(void)
 #endif
 #ifdef CONFIG_BT_HCIUART_3WIRE
 	h5_init();
-#endif
-#ifdef CONFIG_BT_HCIUART_IBS
-	ibs_init();
 #endif
 
 	return 0;
@@ -646,9 +643,9 @@ static void __exit hci_uart_exit(void)
 #ifdef CONFIG_BT_HCIUART_H4
 	h4_deinit();
 #endif
-
+#ifdef CONFIG_BT_HCIUART_BCSP
 	bcsp_deinit();
-
+#endif
 #ifdef CONFIG_BT_HCIUART_LL
 	ll_deinit();
 #endif
@@ -657,9 +654,6 @@ static void __exit hci_uart_exit(void)
 #endif
 #ifdef CONFIG_BT_HCIUART_3WIRE
 	h5_deinit();
-#endif
-#ifdef CONFIG_BT_HCIUART_IBS
-	ibs_deinit();
 #endif
 
 

@@ -35,15 +35,14 @@
 #define HCIUARTGETFLAGS		_IOR('U', 204, int)
 
 /* UART protocols */
-#define HCI_UART_MAX_PROTO	7
+#define HCI_UART_MAX_PROTO	6
 
 #define HCI_UART_H4	0
 #define HCI_UART_BCSP	1
 #define HCI_UART_3WIRE	2
 #define HCI_UART_H4DS	3
 #define HCI_UART_LL	4
-#define HCI_UART_IBS	5
-#define HCI_UART_ATH3K	6
+#define HCI_UART_ATH3K	5
 
 #define HCI_UART_RAW_DEVICE	0
 #define HCI_UART_RESET_ON_INIT	1
@@ -98,8 +97,10 @@ int h4_init(void);
 int h4_deinit(void);
 #endif
 
+#ifdef CONFIG_BT_HCIUART_BCSP
 int bcsp_init(void);
 int bcsp_deinit(void);
+#endif
 
 #ifdef CONFIG_BT_HCIUART_LL
 int ll_init(void);
@@ -114,9 +115,4 @@ int ath_deinit(void);
 #ifdef CONFIG_BT_HCIUART_3WIRE
 int h5_init(void);
 int h5_deinit(void);
-#endif
-
-#ifdef CONFIG_BT_HCIUART_IBS
-int ibs_init(void);
-int ibs_deinit(void);
 #endif
