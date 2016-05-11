@@ -1,13 +1,3 @@
-NOTE: This kernel release is UNSTABLE and meant for development of the Samsung Galaxy Young.
-Kernel version: 3.4.98
-GPU Clock: Stock
-CPU Clock: Stock
-Builds: Yes
-
-What needs to be done?
-- Fix up all of Samsung's crappy code
-
-
 	Linux kernel release 3.x <http://kernel.org/>
 
 These are the release notes for Linux version 3.  Read them carefully,
