@@ -13,6 +13,7 @@
  */
 #include <linux/types.h>
 #include <linux/highuid.h>
+#include <stdbool.h> 
 
 struct user_namespace;
 extern struct user_namespace init_user_ns;
